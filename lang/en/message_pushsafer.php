@@ -20,3 +20,4 @@ $string['usertoken'] = 'Device or Device Group ID';
 $string['setprivatekey'] = 'Go to your Pushsafer Dashboard and insert the private or alias key here.';
 $string['notconfigured'] = 'A Pushsafer private or alias key has not been provided.';
 $string['configured'] = 'A Pushsafer private or alias key has been provided.';
+?>
