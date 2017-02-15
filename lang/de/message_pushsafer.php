@@ -20,3 +20,5 @@ $string['usertoken'] = 'Geräte oder Gerätegruppen ID';
 $string['setprivatekey'] = 'Gehe zu deiner Pushsafer Übersciht and füge den Privaten oder Alias Schlüssel hier ein.';
 $string['notconfigured'] = 'Ein Privater oder Alias Schlüssel wurde nicht eingetragen.';
 $string['configured'] = 'Ein Privater oder Alias Schlüssel wurde eingetragen.';
+
+?>
