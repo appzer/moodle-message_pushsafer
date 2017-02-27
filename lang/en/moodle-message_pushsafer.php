@@ -7,7 +7,7 @@
  *
  * @package moodle-message_pushsafer
  * @author Kevin Siml https://www.pushsafer.com
- * @copyright Copyright &copy; 2016 Kevin Siml pushsafer.com.
+ * @copyright Copyright 2017 Kevin Siml pushsafer.com.
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public Licence v3 (See code header for additional terms)
  */
 
