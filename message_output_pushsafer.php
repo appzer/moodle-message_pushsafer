@@ -5,7 +5,7 @@
  * Pushsafer for Moodle is distributed as GPLv3 software, and is provided free of charge without warranty
  * A full copy of this licence can be found @ http://www.gnu.org/licenses/gpl.html
  *
- * @package message_pushsafer
+ * @package moodle-message_pushsafer
  * @author Kevin Siml https://www.pushsafer.com
  * @copyright Copyright &copy; 2016 Kevin Siml pushsafer.com.
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public Licence v3 (See code header for additional terms)
@@ -60,9 +60,9 @@ class message_output_pushsafer extends message_output {
      */
     public function config_form($preferences) {
        if (!$this->is_system_configured()) {
-            return get_string('notconfigured','message_pushsafer');
+            return get_string('notconfigured','moodle-message_pushsafer');
         } else {
-            return get_string('device', 'message_pushsafer').': <input size="30" name="pushsafer_device" value="'.s($preferences->pushsafer_device).'" />';
+            return get_string('device', 'moodle-message_pushsafer').': <input size="30" name="pushsafer_device" value="'.s($preferences->pushsafer_device).'" />';
         }
     }
 
