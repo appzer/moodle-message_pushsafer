@@ -5,7 +5,7 @@
  * Pushsafer for Moodle is distributed as GPLv3 software, and is provided free of charge without warranty
  * A full copy of this licence can be found @ http://www.gnu.org/licenses/gpl.html
  *
- * @package moodle-message_pushsafer
+ * @package message_pushsafer
  * @author Kevin Siml https://www.pushsafer.com
  * @copyright Copyright 2017 Kevin Siml pushsafer.com.
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public Licence v3 (See code header for additional terms)
@@ -32,7 +32,8 @@ class message_output_pushsafer extends message_output {
             return true;
         }
 
-        $privatekey  = $CFG->privatekey;
+        //$privatekey  = $CFG->privatekey;
+		$privatekey = get_user_preferences( 'message_processor_pushsafer_key', '', $message->key);
         $device = get_user_preferences( 'message_processor_pushsafer_device', '', $message->userto);
         $title   = $message->subject;
         $messtxt = $message->fullmessage;
@@ -60,9 +61,9 @@ class message_output_pushsafer extends message_output {
      */
     public function config_form($preferences) {
        if (!$this->is_system_configured()) {
-            return get_string('notconfigured','moodle-message_pushsafer');
+            return get_string('notconfigured','message_pushsafer');
         } else {
-            return get_string('device', 'moodle-message_pushsafer').': <input size="30" name="pushsafer_device" value="'.s($preferences->pushsafer_device).'" />';
+            return get_string('device', 'message_pushsafer').': <input size="30" name="pushsafer_device" value="'.s($preferences->pushsafer_device).'" /><br>'.get_string('key', 'message_pushsafer').': <input size="30" name="pushsafer_key" value="'.s($preferences->pushsafer_key).'" />';
         }
     }
 
@@ -75,6 +76,7 @@ class message_output_pushsafer extends message_output {
     public function process_form($form, &$preferences) {
        if (isset($form->pushsafer_device) && !empty($form->pushsafer_device)) {
             $preferences['message_processor_pushsafer_device'] = $form->pushsafer_device;
+			$preferences['message_processor_pushsafer_key'] = $form->pushsafer_key;
         }
     }
 
@@ -86,6 +88,7 @@ class message_output_pushsafer extends message_output {
      */
     public function load_data(&$preferences, $userid) {
        $preferences->pushsafer_device = get_user_preferences( 'message_processor_pushsafer_device', '', $userid);
+	   $preferences->pushsafer_key = get_user_preferences( 'message_processor_pushsafer_key', '', $userid);
     }
 
     /**
