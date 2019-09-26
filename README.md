@@ -1,4 +1,4 @@
-![Pushsafer](https://www.pushsafer.com/de/assets/logos/logo.png | width="300px")
+<img src="https://www.pushsafer.com/de/assets/logos/logo.png" alt="Pushsafer" width="350">
 
 Send [pushsafer.com](https://www.pushsafer.com) notifications from moodle
 
