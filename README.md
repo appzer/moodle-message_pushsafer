@@ -5,6 +5,7 @@ This plugin is a message provider that allows push notifications via the pushsaf
 
 Once installed, configure the message provider with the private key, and the devices which should recieve push notifications. Then configure which messages are to be sent as push notifications. All done!
 
-# Download
+## Download
 [https://moodle.org/plugins/message_pushsafer](https://moodle.org/plugins/message_pushsafer)
+
 [https://github.com/appzer/moodle-message_pushsafer](https://github.com/appzer/moodle-message_pushsafer)
